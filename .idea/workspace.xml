@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="850af993-4b85-486c-9a31-b4fbeb8e86aa" name="Changes" comment="2 проверка">
+    <list default="true" id="850af993-4b85-486c-9a31-b4fbeb8e86aa" name="Changes" comment="3 проверка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterCheckbox/FilterCheckbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,7 @@
       <workItem from="1703018064987" duration="602000" />
       <workItem from="1703028513403" duration="2577000" />
       <workItem from="1703086595889" duration="2000" />
-      <workItem from="1703097065988" duration="197000" />
+      <workItem from="1703097065988" duration="656000" />
     </task>
     <task id="LOCAL-00001" summary="1 проверка">
       <option name="closed" value="true" />
@@ -151,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703030864721</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3 проверка">
+      <option name="closed" value="true" />
+      <created>1703097281260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703097281260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +172,7 @@
     <MESSAGE value="Readme update" />
     <MESSAGE value="1 проверка" />
     <MESSAGE value="2 проверка" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 проверка" />
+    <MESSAGE value="3 проверка" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 проверка" />
   </component>
 </project>
