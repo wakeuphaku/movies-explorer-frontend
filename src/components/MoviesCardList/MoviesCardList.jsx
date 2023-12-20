@@ -1,7 +1,7 @@
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-export default function MovieCardList () {
+export default function MovieCardList ({isSavedMoviesPage}) {
     return (
         <section className='movie-card-list'>
             <div className='movie-card-list__block'>

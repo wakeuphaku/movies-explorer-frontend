@@ -10,7 +10,7 @@ export default function SavedMovies ({openLinks}) {
         <>
             <Header openLinks={openLinks} />
             <SearchForm />
-            <MoviesCardList />
+            <MoviesCardList isSavedMoviesPage />
             <Footer />
         </>
     )

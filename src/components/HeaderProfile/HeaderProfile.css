@@ -20,3 +20,12 @@
     height: 30px;
     border-radius: 6px;
 }
+.header-profile__icon_black {
+    background: url(../../images/profile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    background-color: #F9F9F9;
+    width: 30px;
+    height: 30px;
+}

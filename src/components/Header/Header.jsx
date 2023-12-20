@@ -7,7 +7,7 @@ const isLoggin = true;
 
 function Header ({ isMain, openLinks }) {
     return (
-        <header className={`header ${isMain ? 'header__color_pink' : 'header__color_white'}`}>
+        <header className={`header ${isMain ? 'header__pink' : 'header__white'}`}>
             <Link to='/'>
                 <img className='header__logo' src={logo} alt='logo'/>
             </Link>
@@ -16,7 +16,7 @@ function Header ({ isMain, openLinks }) {
                         <div className='header__links'>
                             <NavLink className={({isActive}) => `header__link ${isActive ? 'header__link_active' : '' }`} to='/movies'>Фильмы</NavLink>
                             <NavLink className={({isActive}) => `header__link ${isActive ? 'header__link_active' : '' }`} to='/saved-movies'>Сохранённые фильмы</NavLink>
-                            <HeaderProfile/>
+                            <HeaderProfile isMain={isMain}/>
                         </div>
                     <div className='header__burger' onClick={openLinks}></div>
 

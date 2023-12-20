@@ -1,14 +1,18 @@
 .header {
-    display: flex;
+
     padding: 0 70px;
-    align-items: center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+
+
     height: 74px;
 }
-.header__color_white {
+
+.header__white {
     background-color: #ffffff;
 }
-.header__color_pink {
+.header__pink {
     background-color: #F3C1F8;
 }
 

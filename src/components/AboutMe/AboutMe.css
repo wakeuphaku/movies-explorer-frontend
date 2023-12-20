@@ -90,7 +90,7 @@
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
     .about-me {
         padding: 70px 14px;
     }
@@ -130,5 +130,10 @@
 
     .about-me__link {
         margin-top: 40px;
+    }
+    .about-me__photo {
+        width: 292px;
+        height: 352px;
+        flex-shrink: 0;
     }
 }

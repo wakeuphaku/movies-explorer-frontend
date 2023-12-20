@@ -88,9 +88,10 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
     .techs {
         padding: 70px 18px;
+        background-color: white;
     }
 
     .techs__title {
@@ -112,6 +113,7 @@
         line-height: 16px;
         letter-spacing: -0.44px;
         width: 292px;
+        margin-bottom: 0;
     }
 
     .techs__list {

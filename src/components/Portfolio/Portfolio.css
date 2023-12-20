@@ -19,6 +19,7 @@
     padding-bottom: 19px;
     align-items: center;
     margin: 20px 0 0;
+    text-decoration: none;
 }
 
 .portfolio__links:last-child {
@@ -33,6 +34,7 @@
     line-height: 50px; /* 166.667% */
     letter-spacing: -1.2px;
     text-decoration: none;
+    margin: 0;
 }
 @media (max-width: 768px) {
     .portfolio {

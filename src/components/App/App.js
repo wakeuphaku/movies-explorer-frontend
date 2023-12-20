@@ -1,6 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-
+import {Routes, Route} from 'react-router-dom';
 
 
 import './App.css';
@@ -14,28 +13,29 @@ import Navigation from "../Navigation/Navigation";
 import NotFound from "../NotFound/NotFound";
 
 
-
-
 export default function App() {
     const [openMenu, setOpenMenu] = React.useState(false);
+
     function openLinks() {
         setOpenMenu(true)
     }
+
     function closeLinks() {
         setOpenMenu(false)
     }
+
     return (
         <>
             <Routes>
-                <Route path='/' element={<Main openLinks={openLinks}/>} />
-                <Route path='/movies' element={<Movies openLinks={openLinks} />} />
-                <Route path='/saved-movies' element={<SavedMovies openLinks={openLinks} />} />
-                <Route path='/profile' element={<Profile openLinks={openLinks} />} />
-                <Route path='/signin' element={<Login />} />
-                <Route path='/signup' element={<Register />} />
-                <Route path='*' element={<NotFound />} />
+                <Route path='/' element={<Main openLinks={openLinks}/>}/>
+                <Route path='/movies' element={<Movies openLinks={openLinks}/>}/>
+                <Route path='/saved-movies' element={<SavedMovies openLinks={openLinks}/>}/>
+                <Route path='/profile' element={<Profile openLinks={openLinks}/>}/>
+                <Route path='/signin' element={<Login/>}/>
+                <Route path='/signup' element={<Register/>}/>
+                <Route path='*' element={<NotFound/>}/>
             </Routes>
-            <Navigation isOpen={openMenu} closeLinks={closeLinks} />
+            <Navigation isOpen={openMenu} closeLinks={closeLinks}/>
         </>
     )
 }

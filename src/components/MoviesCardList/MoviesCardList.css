@@ -29,7 +29,7 @@
     cursor: pointer;
     margin-bottom: 80px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
 
     .movie-card-list__block {
         gap: 47px 28px;
@@ -42,7 +42,7 @@
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 705px) {
     .movie-card-list {
         padding: 40px 10px 3px;
         margin: 0;

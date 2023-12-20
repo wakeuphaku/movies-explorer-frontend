@@ -102,7 +102,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
     .form {
         padding: 56px 30px 28px;
         margin: 0;
