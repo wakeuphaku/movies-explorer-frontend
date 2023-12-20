@@ -1,0 +1,31 @@
+.header-profile {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    text-decoration: none;
+}
+.header-profile__text {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+}
+.header-profile__icon {
+    background: url(../../images/profile__icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+.header-profile__icon_black {
+    background: url(../../images/profile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    background-color: #F9F9F9;
+    width: 30px;
+    height: 30px;
+}
