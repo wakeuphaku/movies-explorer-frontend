@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="850af993-4b85-486c-9a31-b4fbeb8e86aa" name="Changes" comment="1 проверка">
+    <list default="true" id="850af993-4b85-486c-9a31-b4fbeb8e86aa" name="Changes" comment="2 проверка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutMe/AboutMe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderProfile/HeaderProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderProfile/HeaderProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderProfile/HeaderProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderProfile/HeaderProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesCard/MoviesCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesCardList/MoviesCardList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Portfolio/Portfolio.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register/Register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SavedMovies/SavedMovies.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Techs/Techs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Techs/Techs.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "level-2",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.start.executor": "Run",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;level-2&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2.5\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\movies-explorer-frontend\src\components\MoviesCard" />
@@ -133,7 +115,9 @@
       <workItem from="1702938475609" duration="1106000" />
       <workItem from="1702997595951" duration="2274000" />
       <workItem from="1703018064987" duration="602000" />
-      <workItem from="1703028513403" duration="2267000" />
+      <workItem from="1703028513403" duration="2577000" />
+      <workItem from="1703086595889" duration="2000" />
+      <workItem from="1703097065988" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="1 проверка">
       <option name="closed" value="true" />
@@ -159,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702933342636</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2 проверка">
+      <option name="closed" value="true" />
+      <created>1703030864721</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703030864721</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +160,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Readme update" />
     <MESSAGE value="1 проверка" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 проверка" />
+    <MESSAGE value="2 проверка" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 проверка" />
   </component>
 </project>
