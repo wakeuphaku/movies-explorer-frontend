@@ -1,129 +1,129 @@
 .about-project {
-    display: flex;
-    flex-direction: column;
-    padding: 110px 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px;
 }
 .about-project__title {
-    color: #000;
+  color: #000;
 
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.88px;
-    border-bottom: 1px solid black;
-    padding-bottom: 23px;
-    margin: 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid black;
+  padding-bottom: 23px;
+  margin: 0;
 }
 .about-project__blocks {
-    margin-top: 70px;
-    display: flex;
-    gap: 40px;
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
 }
 .about-project__subtitle {
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.8px;
-    margin: 0;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0;
 }
 .about-project__text {
-    color: #000;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 26px 0 0;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 26px 0 0;
 }
 .about-project__plan {
-    margin-top: 110px;
-    display: grid;
-    grid-template-columns: minmax(228px, 1fr) 4fr;
-    grid-template-rows: 36px auto;
-    row-gap: 14px;
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: minmax(228px, 1fr) 4fr;
+  grid-template-rows: 36px auto;
+  row-gap: 14px;
 }
 .about-project__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
 }
 .about-project__item_black-box {
-    background: #000;
-    color: #FFF;
+  background: #000;
+  color: #fff;
 }
 .about-project__item_grey-box {
-    background: #F2F2F2;
+  background: #f2f2f2;
 }
 .about-project__item_text {
-    color: #A0A0A0;
+  color: #a0a0a0;
 }
 @media (max-width: 768px) {
-    .about-project {
-        padding: 90px 50px;
-    }
+  .about-project {
+    padding: 90px 50px;
+  }
 
-    .about-project__blocks {
-        gap: 30px;
-    }
+  .about-project__blocks {
+    gap: 30px;
+  }
 
-    .about-project__subtitle {
-        margin-bottom: 22px;
-    }
+  .about-project__subtitle {
+    margin-bottom: 22px;
+  }
 
-    .about-project__text {
-        font-size: 12px;
-        line-height: 18px;
-    }
+  .about-project__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
 
-    .about-project__plan {
-        margin-top: 93px;
-        grid-template-columns: minmax(140px, 1fr) 4fr;
-    }
+  .about-project__plan {
+    margin-top: 93px;
+    grid-template-columns: minmax(140px, 1fr) 4fr;
+  }
 }
 
-@media (max-width: 320px) {
-    .about-project {
-        padding: 70px 18px;
-    }
+@media (max-width: 435px) {
+  .about-project {
+    padding: 70px 14px;
+  }
 
-    .about-project__title {
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: -0.72px;
-        padding-bottom: 28px;
-    }
+  .about-project__title {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.72px;
+    padding-bottom: 28px;
+  }
 
-    .about-project__blocks {
-        flex-direction: column;
-        margin-top: 60px;
-        gap: 56px;
-    }
+  .about-project__blocks {
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 56px;
+  }
 
-    .about-project__subtitle {
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: -0.72px;
-        margin-bottom: 16px;
-    }
+  .about-project__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.72px;
+    margin-bottom: 16px;
+  }
 
-    .about-project__text {
-        font-size: 11px;
-        line-height: 16px;
-    }
+  .about-project__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
 
-    .about-project__plan {
-        grid-template-columns: minmax(100px, 1fr) 4fr;
-        row-gap: 10px;
-        margin-top: 60px;
-    }
+  .about-project__plan {
+    grid-template-columns: minmax(100px, 1fr) 4fr;
+    row-gap: 10px;
+    margin-top: 60px;
+  }
 
-    .about-project__item {
-        font-size: 11px;
-        line-height: 13px;
-    }
+  .about-project__item {
+    font-size: 11px;
+    line-height: 13px;
+  }
 }
