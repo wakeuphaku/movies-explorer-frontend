@@ -10,4 +10,4 @@
 
 **GitHub**
 
-[Ссылка на GitHub](https://diplom.haku.nomoredomainsmonster.ru/)
+[Ссылка на GitHub](https://github.com/wakeuphaku/movies-explorer-frontend/tree/level-3)
