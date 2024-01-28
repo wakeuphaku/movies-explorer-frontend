@@ -1,13 +1,14 @@
 import './Header.css';
 import logo from '../../images/logo.svg';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import HeaderProfile from '../HeaderProfile/HeaderProfile';
-const isLoggin = true;
 
-function Header({ isMain, openLinks }) {
+
+function Header({ isMain, isLoggin, openLinks }) {
+    const location = useLocation().pathname;
   return (
-    <header className={`header ${isMain ? 'header__pink' : 'header__white'}`}>
+    <header className={`header ${location === '/' ? 'header__pink' : 'header__white'}`}>
       <Link to="/">
         <img className="logo" src={logo} alt="logo" />
       </Link>

@@ -8,6 +8,9 @@
   max-height: 201px;
   object-fit: cover;
   margin: 0;
+  width: 360px;
+  height: 201px;
+  border-radius: 6px;
 }
 
 .movies-card__button {
@@ -50,6 +53,7 @@
   font-weight: 500;
   line-height: normal;
   margin: 14px 0 0 14px;
+  width: 250px;
 }
 
 .movies-card__time {

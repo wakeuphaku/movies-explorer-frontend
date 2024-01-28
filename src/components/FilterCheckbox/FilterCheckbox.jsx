@@ -1,25 +1,11 @@
 import './FilterCheckbox.css';
-import {useState} from "react";
 
-export default function FilterCheckbox () {
-
-    const [isShort, setIsShort] = useState(false);
-
-    const handleShortOff = () => {
-        setIsShort(true)
-    }
-
-    const handleShortOn = () => {
-        setIsShort(false)
-    }
+export default function FilterCheckbox ({onChange, checked}) {
 
     return (
         <section className='filter-checkbox'>
-            {!isShort ? (
-            <button className='filter-checkbox__button' onClick={handleShortOff}></button>
-                ) : (
-                <button className='filter-checkbox__button_off' onClick={handleShortOn}></button>
-            )}
+            <input className='filter-checkbox__button' onChange={onChange} checked={checked} type='checkbox'/>
+            <span className="filter-checkbox__fake-button"></span>
             <p className='filter-checkbox__text'>Короткометражки</p>
         </section>
     )

@@ -12,7 +12,7 @@ import Footer from '../Footer/Footer';
 export default function Main({ openLinks }) {
   return (
     <>
-      <Header isMain={true} openLinks={openLinks} />
+
       <Promo />
       <NavTab />
       <AboutProject />
