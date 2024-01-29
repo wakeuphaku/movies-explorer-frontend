@@ -10,4 +10,4 @@
 
 **GitHub**
 
-[Ссылка на GitHub](https://github.com/wakeuphaku/movies-explorer-frontend/tree/level-3)
+[Ссылка на GitHub](https://github.com/wakeuphaku/movies-explorer-frontend/pull/3)
