@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Routes, Route, useNavigate, useLocation} from 'react-router-dom';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import moviesApi from '../../utils/MoviesApi'
 import api from "../../utils/MainApi";
 import {CurrentUserContext} from '../../context/CurrentUserContext';
@@ -22,12 +22,16 @@ export default function App() {
     const [movie, setMovie] = useState([]);
     const [isLogin, setIsLogin] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
-    const [searchText, setSearchText] = useState('');
     const [currentUser, setCurrentUser] = useState({});
     const [savedMovies, setSavedMovies] = useState([]);
 
+
     const navigate = useNavigate();
 
+
+    useEffect(() => {
+        handleCheckToken();
+    }, []);
 
     function openLinks() {
         setOpenMenu(true)
@@ -69,7 +73,7 @@ export default function App() {
         api.register(name, email, password)
             .then(() => {
                 handleLogin(email, password);
-                navigate('/', {replace: true});
+                navigate('/movies', {replace: true});
             })
             .catch((err) => {
                 console.log(err);
@@ -80,9 +84,9 @@ export default function App() {
         api.login(email, password)
             .then((item) => {
                 localStorage.setItem('currentUser', JSON.stringify(item));
-                    setIsLogin(true);
-                    setCurrentUser(item)
-                    navigate('/', {replace: true});
+                setIsLogin(true);
+                setCurrentUser(item)
+                navigate('/movies', {replace: true});
             })
             .catch((err) => {
                 console.log(err);
@@ -97,18 +101,15 @@ export default function App() {
                 .then((item) => {
                     if (item) {
                         setIsLogin(true);
-                        navigate("/", { replace: true });
                     }
                 })
                 .catch((err) => {
+
                     console.log(err);
-                });
+                })
+
         }
     };
-
-    React.useEffect(() => {
-        handleCheckToken();
-    }, []);
 
     const handleUpdateProfile = (name, email) => {
         api.updateProfile(name, email)
@@ -148,8 +149,7 @@ export default function App() {
     }
 
     function handleDeleteMovie(movie) {
-        const cardToDelete = savedMovies.find(c => c.id === movie.id)
-        api.deleteMovies(cardToDelete._id)
+        api.deleteMovies(movie._id)
             .then(() => {
                 setSavedMovies(savedMovies.filter((item) => item._id !== movie._id));
             })
@@ -161,42 +161,56 @@ export default function App() {
     return (
         <>
             <CurrentUserContext.Provider value={currentUser}>
-                <Header isMain={true} isLoggin={isLogin} openLinks={openLinks}/>
+
                 <Routes>
-                    <Route path='/' element={<Main openLinks={openLinks}/>}/>
+                    <Route path='/' element={
+                        <>
+                            <Header isMain={true} isLoggin={isLogin} openLinks={openLinks}/>
+                            <Main openLinks={openLinks}/>
+                        </>
+                    }/>
+
+                    <Route path='/movies'
+                           element={
+                               <>
+                                   <Header isMain={true} isLoggin={isLogin} openLinks={openLinks}/>
+                                   <ProtectedRoute
+                                       isLogin={isLogin}
+                                       element={Movies}
+                                       movie={movie}
+                                       onSave={handleSaveMovie}
+                                       savedMovies={savedMovies}
+                                       onDelete={handleDeleteMovie}
+                                   />
+                               </>}/>
+                    <Route path='/saved-movies'
+                           element={
+                               <>
+                                   <Header isMain={true} isLoggin={isLogin} openLinks={openLinks}/>
+                                   <ProtectedRoute
+                                       isLogin={isLogin}
+                                       movie={movie}
+                                       element={SavedMovies}
+                                       onSave={handleSaveMovie}
+                                       savedMovies={savedMovies}
+                                       onDelete={handleDeleteMovie}
+                                   />
+                               </>
+                           }/>
+                    <Route path='/profile'
+                           element={
+                               <>
+                                   <Header isMain={true} isLoggin={isLogin} openLinks={openLinks}/>
+                                   <ProtectedRoute
+                                       element={Profile}
+                                       isLogin={isLogin}
+                                       onSubmit={handleUpdateProfile}
+                                       logout={handleLoguot}
+                                   />
+                               </>
+                           }/>
                     <Route path='/signin' element={<Login handleLoginSubmit={handleLogin} isLogin={isLogin}/>}/>
                     <Route path='/signup' element={<Register handleRegisterSubmit={handleRegister}/>}/>
-                    <Route path='/movies'
-                           element={<ProtectedRoute
-                               isLogin={isLogin}
-                               element={Movies}
-                               movie={movie}
-                               onSave={handleSaveMovie}
-                               savedMovies={savedMovies}
-
-                           />}
-                    />
-                    <Route path='/saved-movies'
-                           element={<ProtectedRoute
-                               isLogin={isLogin}
-                               movie={movie}
-                               element={SavedMovies}
-                               onSave={handleSaveMovie}
-                               savedMovies={savedMovies}
-                               onDelete={handleDeleteMovie}
-
-
-                           />}
-                    />
-                    <Route path='/profile'
-                           element={<ProtectedRoute
-                               isLogin={isLogin}
-                               element={Profile}
-                               onSubmit={handleUpdateProfile}
-                               logout={handleLoguot}
-                           />}
-                    />
-
                     <Route path='*' element={<NotFound/>}/>
                 </Routes>
                 <Navigation isOpen={openMenu} closeLinks={closeLinks}/>
@@ -204,3 +218,4 @@ export default function App() {
         </>
     )
 }
+

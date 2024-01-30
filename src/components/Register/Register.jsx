@@ -60,7 +60,7 @@ export default function Register({handleRegisterSubmit}) {
                     <span className="form__input-error">{errors.password}</span>
                 </label>
             </div>
-            <button className="form__button" type="submit">Зарегистрироваться</button>
+            <button className={`form__button ${!isValid && 'form__button_off'}`} type="submit" disabled={!isValid}>Зарегистрироваться</button>
             <div className="form__links">
                 <p className="form__text">Уже зарегистрированы?</p>
                 <Link to="/signin" className="form__link">

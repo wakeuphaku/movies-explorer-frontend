@@ -42,12 +42,9 @@ export default function Movies({
         );
     }
 
-    function handleSearch(searchQuery, check) {
+    function handleSearch(searchQuery) {
         localStorage.setItem(`${currentUser.email}:searchQuery`, searchQuery);
         setSearchQuery(searchQuery);
-
-        localStorage.setItem(`${currentUser.email}:shortMovies`, check);
-        setShortMovies(check);
 
         if (moviesList.length === 0) {
             moviesApi.getMovies()
@@ -75,6 +72,7 @@ export default function Movies({
     }
 
     function handleShortMovies() {
+        localStorage.setItem(`${currentUser.email}:shortMovies`, !shortMovies);
         setShortMovies(!shortMovies);
     }
 

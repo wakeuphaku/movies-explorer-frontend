@@ -72,6 +72,9 @@ cursor: pointer;
   line-height: normal;
   margin-top: 82px;
 }
+.form__button_off {
+ opacity: .2;
+}
 
 .form__links {
   display: flex;

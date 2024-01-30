@@ -45,7 +45,9 @@ export default function Login({handleLoginSubmit, isLogin}) {
                     <span className="form__input-error">{errors.password}</span>
                 </label>
             </div>
-            <button className="form__button" type="submit">Войти</button>
+            <button className={`form__button ${!isValid && 'form__button_off'}`} type="submit"
+                    disabled={!isValid}>Войти
+            </button>
             <div className="form__links">
                 <p className="form__text">Еще не зарегистрированы?</p>
                 <Link to="/signup" className="form__link">

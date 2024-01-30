@@ -53,7 +53,9 @@ export default function MovieCardList({movie, onSave, onDelete, savedMovies, not
     return (
 
         <section className="movie-card-list">
-            <span className="movie-card-lis__notfound">{notFound}</span>
+            {movie.length === 0 && (
+                <span className="movie-card-lis__notfound">Ничего не найдено</span>
+            )}
             <div className="movie-card-list__block">
                 {movie?.slice(0, location.pathname === '/saved-movies' ? savedMovies?.length : showedMovies).map((movie) => (
                     <MoviesCard
@@ -66,10 +68,11 @@ export default function MovieCardList({movie, onSave, onDelete, savedMovies, not
                     />
                 ))}
             </div>
-
+            {showedMovies < movie.length && (
             <button className="movie-card-list__button" onClick={handleShowMore}>
                 Еще
             </button>
+            )}
         </section>
 
     )
