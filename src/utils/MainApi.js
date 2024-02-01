@@ -19,7 +19,7 @@ class MainApi {
         return fetch(`${this._baseUrl}/signup`, {
             method: 'POST',
             headers: this._headers,
-            body: JSON.stringify({name, email, password})
+            body: JSON.stringify({ name, email, password })
         })
             .then(this._getResponseData)
             .then((data) => {
@@ -80,6 +80,8 @@ class MainApi {
         })
             .then(this._getResponseData)
     };
+
+
     saveMovies(movie) {
         return fetch(`${this._baseUrl}/movies`, {
             method: 'POST',
