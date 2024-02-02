@@ -21,19 +21,15 @@ export default function Movies({
   const currentUser = useContext(CurrentUserContext);
 
   const [moviesList, setMoviesList] = useState(
-    JSON.parse(localStorage.getItem(`${currentUser.email}:moviesList`)) || []
+    JSON.parse(localStorage.getItem('moviesList')) || []
   );
 
   const [filterMovies, setFilterMovies] = useState(
-    JSON.parse(localStorage.getItem(`${currentUser.email}:filterMovies`)) || []
+    JSON.parse(localStorage.getItem('filterMovies')) || []
   );
-  const [searchQuery, setSearchQuery] = useState(
-    localStorage.getItem(`${currentUser.email}:searchQuery`) || ''
-  );
+  const [searchQuery, setSearchQuery] = useState(localStorage.getItem('searchQuery') || '');
 
-  const [shortMovies, setShortMovies] = useState(
-    localStorage.getItem(`${currentUser.email}:shortMovies`) === 'true'
-  );
+  const [shortMovies, setShortMovies] = useState(localStorage.getItem('shortMovies') === 'true');
 
   function filterSearchQuery(movies, searchQuery) {
     if (searchQuery === '') return [];
@@ -45,19 +41,19 @@ export default function Movies({
   }
 
   function handleSearch(searchQuery) {
-    localStorage.setItem(`${currentUser.email}:searchQuery`, searchQuery);
+    localStorage.setItem('searchQuery', searchQuery);
     setSearchQuery(searchQuery);
 
     if (moviesList.length === 0) {
       moviesApi
         .getMovies()
         .then(item => {
-          localStorage.setItem(`${currentUser.email}:moviesList`, JSON.stringify(item));
+          localStorage.setItem('moviesList', JSON.stringify(item));
           setMoviesList(item);
           const isFoundMovies = searchQuery ? filterSearchQuery(item, searchQuery) : item;
 
           setFilterMovies(isFoundMovies);
-          localStorage.setItem(`${currentUser.email}:filterMovies`, JSON.stringify(isFoundMovies));
+          localStorage.setItem('filterMovies', JSON.stringify(isFoundMovies));
         })
         .catch(err => {
           console.log(err);
@@ -65,7 +61,7 @@ export default function Movies({
     } else {
       const isFoundMovies = searchQuery ? filterSearchQuery(moviesList, searchQuery) : moviesList;
       setFilterMovies(isFoundMovies);
-      localStorage.setItem(`${currentUser.email}:filterMovies`, JSON.stringify(isFoundMovies));
+      localStorage.setItem('filterMovies', JSON.stringify(isFoundMovies));
     }
   }
 
@@ -74,22 +70,22 @@ export default function Movies({
   }
 
   function handleShortMovies() {
-    localStorage.setItem(`${currentUser.email}:shortMovies`, !shortMovies);
+    localStorage.setItem('shortMovies', !shortMovies);
     setShortMovies(!shortMovies);
   }
 
   useEffect(() => {
-    if (localStorage.getItem(`${currentUser.email}:moviesList`)) {
-      setMoviesList(JSON.parse(localStorage.getItem(`${currentUser.email}:moviesList`)));
+    if (localStorage.getItem('moviesList')) {
+      setMoviesList(JSON.parse(localStorage.getItem('moviesList')));
     }
-    if (localStorage.getItem(`${currentUser.email}:searchQuery`)) {
-      setSearchQuery(localStorage.getItem(`${currentUser.email}:searchQuery`));
+    if (localStorage.getItem('searchQuery')) {
+      setSearchQuery(localStorage.getItem('searchQuery'));
     }
-    if (localStorage.getItem(`${currentUser.email}:filterMovies`)) {
-      setFilterMovies(JSON.parse(localStorage.getItem(`${currentUser.email}:filterMovies`)));
+    if (localStorage.getItem('filterMovies')) {
+      setFilterMovies(JSON.parse(localStorage.getItem('filterMovies')));
     }
 
-    setShortMovies(localStorage.getItem(`${currentUser.email}:shortMovies`) === 'true');
+    setShortMovies(localStorage.getItem('shortMovies') === 'true');
   }, [currentUser]);
 
   return (
