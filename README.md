@@ -32,3 +32,6 @@
 [Ссылка на сайт](https://diplom.haku.nomoredomainsmonster.ru/)
 
 [Ссылка на GitHub](https://github.com/wakeuphaku/movies-explorer-frontend/)
+
+[Ссылка на Backend](https://github.com/wakeuphaku/movies-explorer-api)
+
